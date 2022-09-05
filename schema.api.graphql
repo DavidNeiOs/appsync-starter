@@ -1,0 +1,25 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  getImageUploadUrl(extension: String, contentType: String): AWSURL!
+  getMyProfile: Profile!
+}
+
+type Mutation {
+  editMyProfile(newProfile: ProfileInput!): Profile!
+}
+
+input ProfileInput {
+  name: String
+  imageUrl: AWSURL
+}
+
+type Profile {
+  id: ID!
+  name: String!
+  imageUrl: AWSURL
+  createdAt: AWSDateTime!
+}
