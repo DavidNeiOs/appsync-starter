@@ -8,3 +8,6 @@ node_modules
 
 # env file
 .env
+# Ignore serverless manifest files
+serverless.manifest.json
+.serverless/manifest.json
