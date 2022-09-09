@@ -11,7 +11,7 @@
        },
        "expressionValues" : {
            ":name" : $util.dynamodb.toDynamoDBJson($context.arguments.newProfile.name),
-           ":imageUrl" : $util.dynamodb.toDynamoDBJson($context.arguments.newProfile.imageUrl),           
+           ":imageUrl" : $util.dynamodb.toDynamoDBJson($context.arguments.newProfile.imageUrl)           
        }
     },
     "condition" : {
