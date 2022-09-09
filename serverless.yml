@@ -4,6 +4,7 @@ frameworkVersion: "3"
 plugins:
   - serverless-appsync-plugin
   - serverless-iam-roles-per-function
+  - serverless-export-env
 
 provider:
   name: aws
@@ -22,6 +23,8 @@ custom:
   stage: ${sls:stage}
   appSync:
     - ${file(serverless.appsync-api.yml)}
+  export-env:
+    overwrite: true
 
 functions:
   confirmUserSignup:
