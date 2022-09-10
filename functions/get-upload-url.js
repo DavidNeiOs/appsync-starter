@@ -6,7 +6,7 @@ const ulid = require("ulid");
 
 const { BUCKET_NAME } = process.env;
 
-module.exports.handler = (event) => {
+module.exports.handler = async (event) => {
   const id = ulid.ulid();
   let key = `${event.identity.username}/${id}`;
 
